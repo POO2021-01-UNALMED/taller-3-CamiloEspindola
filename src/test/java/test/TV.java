@@ -1,6 +1,8 @@
 package test; 
 
+
 package taller3.televisores;
+
 
 
 public class TV {
@@ -58,10 +60,16 @@ public class TV {
 	}
 
 	public void setVolumen( int volum) {
-		 volumen = volum;
+		if (volum < 0 || volum > 6)
+			return;
+		else 
+		volumen = volum;
 	}
 
 	public void setCanal (int cana) {
+		if (cana < 1 || cana > 120)
+			return;
+		else
 		canal = cana;
 	}
 	public void setNumTV (int numtv) {
