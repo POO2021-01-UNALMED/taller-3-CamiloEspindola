@@ -1,9 +1,8 @@
+
 package test; 
 
 
 package taller3.televisores;
-
-
 
 public class TV {
 
@@ -43,8 +42,12 @@ public class TV {
 		return canal;
 	}
 	
-	public int getnumTv() {
+	public static int getNumTV() {
 		return numTV;
+	}
+	public boolean getEstado() {
+		return estado;
+		
 	}
 	
 	public void setMarca(Marca marc) {
@@ -60,7 +63,7 @@ public class TV {
 	}
 
 	public void setVolumen( int volum) {
-		if (volum < 0 || volum > 6)
+		if (volum < 0 || volum > 7)
 			return;
 		else 
 		volumen = volum;
@@ -69,10 +72,13 @@ public class TV {
 	public void setCanal (int cana) {
 		if (cana < 1 || cana > 120)
 			return;
+		if (estado == false)
+			return;
 		else
 		canal = cana;
 	}
-	public void setNumTV (int numtv) {
+	
+	public static void setNumTV (int numtv) {
 		 numTV = numtv;
 	}
 	public void turnOn() {
